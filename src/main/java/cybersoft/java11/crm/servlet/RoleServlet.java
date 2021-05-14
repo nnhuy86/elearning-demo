@@ -57,13 +57,11 @@ public class RoleServlet extends HttpServlet {
 				req.getRequestDispatcher(JspPathConst.ROLE_UPDATE).forward(req, resp);
 				break;
 			case UrlConst.ROLE_DELETE:
-				
 				int willBeDeletedId = Integer.parseInt(req.getParameter("id"));
 				
 				biz.deleteById(willBeDeletedId);
-	
+				
 				resp.sendRedirect(req.getContextPath() + UrlConst.ROLE_DASHBOARD);
-			
 				break;
 
 		default:
@@ -127,11 +125,6 @@ public class RoleServlet extends HttpServlet {
 				
 				break;
 			case UrlConst.ROLE_DELETE:
-				int willBeDeletedId = Integer.parseInt(req.getParameter("id"));
-				System.out.println(willBeDeletedId);
-				biz.deleteById(willBeDeletedId);
-	
-				resp.sendRedirect(req.getContextPath() + UrlConst.ROLE_DASHBOARD);
 				
 				break;
 

@@ -34,8 +34,8 @@ public class HomeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO: check database health
 		/* cookies and sessions demo 
-		// create a new cookie: "username" is name of cookie and "nguyenhuy" is value
-		Cookie cookie = new Cookie("username", "nguyenhuy");
+		// create a new cookie: "username" is name of cookie and "huy" is value
+		Cookie cookie = new Cookie("username", "huy");// username la ten user tu email login (vidu: huy@gmail.com thi username la huy)
 		// set time to live for cookie is 20 seconds
 		cookie.setMaxAge(20);
 		// add cookie to response to send to client
@@ -60,7 +60,7 @@ public class HomeServlet extends HttpServlet {
 		
 		if(currentSession.getAttribute("loggedUser") == null) {
 			// set an attribute to current session
-			currentSession.setAttribute("loggedUser", "nguyenhuy");
+			currentSession.setAttribute("loggedUser", "huy");
 			// set max time to wait for another request from client
 			currentSession.setMaxInactiveInterval(20);
 		}
